@@ -1,0 +1,238 @@
+:root {
+    --primary: #2C221E;
+    --accent: #C27830;
+    --bg-light: #F9F6F0;
+    --white: #FFFFFF;
+    --text-muted: #6B635F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--primary);
+    line-height: 1.6;
+}
+
+h1, h2, h3, .brand {
+    font-family: 'Playfair Display', serif;
+}
+
+/* Header / Navbar */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(44, 34, 30, 0.95);
+    backdrop-filter: blur(5px);
+    color: var(--white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    z-index: 1000;
+}
+
+/* Contenedor del logo y la etiqueta demo más clara */
+.brand-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    font-size: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--white);
+    text-decoration: none;
+    line-height: 1.2;
+}
+
+.demo-tag {
+    font-size: 0.7rem;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #E29D55; /* Tono más claro y visible */
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+/* Contenedor derecho para alinear enlaces y botón en línea */
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--white);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--accent);
+}
+
+/* Estilo general para botones */
+.btn {
+    background-color: var(--accent);
+    color: var(--white);
+    padding: 0.9rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #a86526;
+    transform: translateY(-2px);
+}
+
+/* Estilo específico para el botón del header */
+.btn-nav {
+    padding: 0.5rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 50px;
+    white-space: nowrap;
+}
+
+/* Hero Section (Imagen del lugar) */
+.hero {
+    height: 90vh;
+    background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 1rem;
+    margin-top: 65px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    font-weight: 300;
+}
+
+/* Secciones Generales */
+section {
+    padding: 5rem 10%;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: var(--primary);
+}
+
+/* Carta / Menú */
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 3rem;
+}
+
+.menu-category h3 {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 0.5rem;
+    display: inline-block;
+}
+
+.menu-item {
+    margin-bottom: 1.5rem;
+}
+
+.menu-item-header {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.menu-item-price {
+    color: var(--accent);
+}
+
+.menu-item-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* Sección Contacto y Teléfono Directo */
+.contact-section {
+    background-color: var(--primary);
+    color: var(--white);
+    text-align: center;
+    padding: 5rem 1rem;
+}
+
+.contact-section h2 {
+    color: var(--white);
+    margin-bottom: 1rem;
+}
+
+.contact-section p {
+    color: #d0c8c2;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+}
+
+.phone-cta {
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 2rem;
+    transition: color 0.3s;
+}
+
+.phone-cta:hover {
+    color: #e08e3d;
+}
+
+/* Footer */
+footer {
+    background-color: #1a1412;
+    color: #8c827c;
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero h1 { font-size: 2.5rem; }
+    .nav-links { display: none; }
+    .demo-tag { font-size: 0.6rem; }
+}
